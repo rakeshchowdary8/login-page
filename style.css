@@ -19,7 +19,16 @@ body {
     width: 100vw;
     height: 100vh;
     
+    
 }
+
+.logo {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    z-index: 3;
+}
+
 
 .form-box {
     position: absolute;
@@ -174,6 +183,7 @@ form {
 .toggle-panel.toggle-right {
     background: url(images/background-right.png);
     background-repeat: no-repeat;
+    right: 0%;
 }
 
 .toggle-panel h1 {
