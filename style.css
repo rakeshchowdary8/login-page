@@ -25,7 +25,6 @@ body {
     position: absolute;
     width: 60%;
     height: 100%;
-    right: 0%;
     background-color: #fff;
     display: flex;
     align-items: center;
@@ -34,10 +33,25 @@ body {
     z-index: 1;
 }
 
-.form-box.login {
-    visibility: visible;
+.form-box.register {
+    visibility: hidden;
     
 }
+
+.container.active .form-box{
+    visibility: visible;
+}
+
+.container.active .form-box.login {
+    visibility: hidden;
+}
+
+
+.container.active .form-box.register {
+    visibility: visible;
+    right: 0%;
+}
+
 form {
     width: 100%;    
 }
@@ -125,9 +139,6 @@ form {
     position: relative;
     height: 100vh;
     width: 100vw;
-    background-image: url(images/background-left.png);
-    background-repeat: no-repeat;
-    
 }
 
 .toggle-panel {
@@ -139,12 +150,30 @@ form {
     justify-content: center;
     align-items: center;
     color: white;
-    background-color: #BDBE3E;
+    right: 0%;
     
 }
 
+.toggle-panel.toggle-left {
+    visibility: hidden;
+}
+.container.active .toggle-panel.toggle-right {
+    visibility: hidden;
+}
+.container.active .toggle-panel.toggle-left {
+    visibility: visible;
+    background: url(images/background-left.png);
+    background-repeat: no-repeat;
+    left: 0%;
+}
+
+.container.active .toggle-panel.toggle-right {
+    left: 0%;
+}
+
 .toggle-panel.toggle-right {
-    right: -50%;
+    background: url(images/background-right.png);
+    background-repeat: no-repeat;
 }
 
 .toggle-panel h1 {
